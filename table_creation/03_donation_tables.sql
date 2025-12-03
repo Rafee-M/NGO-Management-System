@@ -1,5 +1,5 @@
 -- ============================================
--- File: 04_donation_tables.sql
+-- File: 03_donation_tables.sql
 -- Purpose: Create donation-related tables
 -- Dependencies: Donor and Project tables must exist
 -- ============================================
@@ -34,4 +34,5 @@ CREATE TABLE `Inventory` (
   `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`item_id`),
   FOREIGN KEY (`donation_id`) REFERENCES `Donation`(`donation_id`)
+
 );

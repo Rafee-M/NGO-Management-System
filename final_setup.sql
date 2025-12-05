@@ -111,30 +111,6 @@ CREATE TABLE `Beneficiary_Allocation` (
   INDEX `idx_status` (`status`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Events: NGO-organized activities
-CREATE TABLE `Event` (
-  `event_id` INT AUTO_INCREMENT,
-  `event_name` VARCHAR(30) NOT NULL,
-  `description` TEXT NOT NULL,
-  `event_type` VARCHAR(50) NOT NULL,
-  `date` DATE NOT NULL,
-  `start_time` TIME NOT NULL,
-  `end_time` TIME NOT NULL,
-  `location` VARCHAR(40) NOT NULL,
-  `cost` INT NOT NULL DEFAULT 0,
-  `status` ENUM('Scheduled', 'Completed', 'Cancelled') DEFAULT 'Scheduled',
-  `coordinator` INT NOT NULL,
-  `project_id` INT NOT NULL,
-  PRIMARY KEY (`event_id`),
-  FOREIGN KEY (`project_id`) REFERENCES `Project`(`project_id`) 
-    ON DELETE CASCADE 
-    ON UPDATE CASCADE,
-  
-  -- Indexes
-  INDEX `idx_project` (`project_id`),
-  INDEX `idx_date` (`date`),
-  INDEX `idx_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Budget Allocations: Money assigned from cash pool to projects
 CREATE TABLE `Budget_Allocation` (

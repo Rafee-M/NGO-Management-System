@@ -151,7 +151,7 @@ $user_name = $_SESSION['full_name'];
                 <i class="bi bi-plus-circle me-2"></i> New Project
             </a>
             
-            <a href="modules/volunteers/assign.php" class="nav-link">
+            <a href="modules/volunteers/manage.php" class="nav-link">
                 <i class="bi bi-person-plus me-2"></i> Assign Volunteers
             </a>
             <?php endif; ?>
@@ -350,7 +350,7 @@ $user_name = $_SESSION['full_name'];
                             <a href="modules/donations/add.php" class="list-group-item list-group-item-action">
                                 <i class="bi bi-plus-circle me-2"></i> Add New Donation
                             </a>
-                            <a href="modules/beneficiaries/add.php" class="list-group-item list-group-item-action">
+                            <a href="modules/beneficiaries/manage.php" class="list-group-item list-group-item-action">
                                 <i class="bi bi-person-plus me-2"></i> Add Beneficiary
                             </a>
                             <?php if (checkPermission('Manager')): ?>
@@ -359,7 +359,7 @@ $user_name = $_SESSION['full_name'];
                             </a>
                             <?php endif; ?>
                             <?php if (checkPermission('CEO')): ?>
-                            <a href="modules/staff/add.php" class="list-group-item list-group-item-action">
+                            <a href="modules/staff/manage.php" class="list-group-item list-group-item-action">
                                 <i class="bi bi-person-plus me-2"></i> Add Staff Member
                             </a>
                             <?php endif; ?>
